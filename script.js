@@ -1,4 +1,3 @@
-// Ensure the script runs after the page loads
 document.addEventListener("DOMContentLoaded", function () {
     const taskInput = document.getElementById("task-input");
     const addTaskButton = document.getElementById("add-task");
@@ -15,6 +14,19 @@ document.addEventListener("DOMContentLoaded", function () {
         // Create a new list item
         const taskItem = document.createElement("li"); 
         taskItem.textContent = taskText;
+
+        // delete button
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.style.marginLeft = "10px";
+        deleteButton.style.cursor = "pointer";
+
+        deleteButton.addEventListener("click", function(){
+            taskList.removeChild(taskItem);
+        });
+
+        taskItem.appendChild(deleteButton);
+        
 
         // Add task to the list
         taskList.appendChild(taskItem);
