@@ -49,10 +49,22 @@ button:hover{
     margin-top: 10px;
 }
 
+
 /* individual task */
 #task-list li {
     background: #eee;
     padding: 8px;
     margin: 5px 0;
     border-radius: 4px;
+}
+
+.delete-button{
+    /* background: #eee; */
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.mark-as-complete{
+    margin-left: 5px;
+    cursor: pointer;
 }
